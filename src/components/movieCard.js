@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
-import { useNavigate } from 'react-router-dom';
 
-const MovieCard = ({ id, title, description, posterUrl, rating }) => {
-
-  const Navigate = useNavigate();
+const MovieCard = ({ title, description, posterUrl, rating}) => {
+  
 // Movie card component to display individual movie details
   return (
     <Card style={{ width: '18rem' }} className="movie-card">
@@ -18,9 +16,7 @@ const MovieCard = ({ id, title, description, posterUrl, rating }) => {
         <ListGroup.Item>
           <h3>Rating</h3>
           <h4>{rating}</h4>
-        </ListGroup.Item>
-        <ListGroup.Item>
-          <button onClick={() => Navigate(`/movie/${id}`)}>Watch Trailer</button>
+         
         </ListGroup.Item>
       </ListGroup>
     </Card>
